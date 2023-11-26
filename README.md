@@ -1,6 +1,9 @@
-## NODE version: 20.4.0
+### NODE version: 20.4.0
+### Deployed in Vercel: https://demoweb-fawn.vercel.app/
+
+## Screenshots
 ![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/mobile.png)
-![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/pc.png)
+![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/pc2.png)
 
 # Getting Started with Create React App
 
