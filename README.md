@@ -1,6 +1,6 @@
 ## NODE version: 20.4.0
-![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/public/mobile.png)
-![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/public/pc.png)
+![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/mobile.png)
+![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/pc.png)
 
 # Getting Started with Create React App
 
