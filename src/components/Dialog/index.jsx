@@ -10,7 +10,6 @@ export const DefaultDialog = ({ children, close, open }) => {
     }
 
     useEffect(() => {
-        console.log('open: ', open);
         if (open) setShow(open);
     }, [open]);
 

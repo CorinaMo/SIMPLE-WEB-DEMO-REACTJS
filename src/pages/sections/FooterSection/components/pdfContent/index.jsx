@@ -11,10 +11,8 @@ export const PDFContent = () => {
     const boxStyle = 'flex place-content-center w-[100vw] sm:w-[90vw] md:w-[75vw] lg:w-[65vw] h-[85vh] rounded-lg';
 
     useEffect(() => {
-        pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-            'pdfjs-dist/build/pdf.worker.min.js',
-            import.meta.url,
-        ).toString();
+        pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+
         setFile('/Resume-2023.pdf');
     }, []);
 
