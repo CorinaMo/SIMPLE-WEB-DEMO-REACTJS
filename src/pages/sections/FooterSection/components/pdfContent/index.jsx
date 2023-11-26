@@ -1,5 +1,4 @@
 import { Document, Page } from 'react-pdf';
-import Resume from '../../../../../assets/docs/Resume-2023.pdf';
 import { pdfjs } from 'react-pdf';
 import { useEffect, useRef, useState } from "react";
 import { LoadingAnimation } from "../../../../../components/LoadingAnimation";
@@ -16,7 +15,7 @@ export const PDFContent = () => {
             'pdfjs-dist/build/pdf.worker.min.js',
             import.meta.url,
         ).toString();
-        setFile(Resume);
+        setFile('/Resume-2023.pdf');
     }, []);
 
     useEffect(() => {
