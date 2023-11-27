@@ -31,14 +31,14 @@ export const PostDialog = ({ post, close, open }) => {
                         <h3 className="flex text-6xl font-ephesis text-center font-bold leading-[0.8] sm:leading-[1] md:leading-tight text-gray-800">
                             {post?.title ?? ''}
                         </h3>
-                        {post?.contentNode ? <div className="flex flex-row gap-4 sm:gap-10 font-mont break-after-auto py-6 md:py-12 text-base first-line:indent-2 first-letter:font-ephesis first-letter:font-extrabold first-letter:pr-4 first-letter:uppercase first-letter:text-6xl" >
+                        {post?.contentNode ? <div className="flex flex-row gap-4 sm:gap-10 py-6 md:py-12" >
                             <div className="flex flex-col gap-2">
                                 <div className="rounded-full w-10 h-10 sm:w-12 sm:h-12">
                                     <UserIcon className="w-full h-full" />
                                 </div>
                                 <span className="text-sm">Corina Morera</span>
                             </div>
-                            <div>
+                            <div clasName="font-mont break-after-auto text-base first-line:indent-2 first-letter:font-ephesis first-letter:font-extrabold first-letter:pr-4 first-letter:uppercase first-letter:text-6xl">
                             {documentToReactComponents(post.contentNode, options)}
                             </div>
                         </div> : null}
