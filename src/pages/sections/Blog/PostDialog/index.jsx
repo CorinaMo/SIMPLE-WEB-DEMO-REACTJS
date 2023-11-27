@@ -5,7 +5,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { BLOCKS } from "@contentful/rich-text-types";
 
 export const PostDialog = ({ post, close, open }) => {
-    const Text = ({ children }) => <><p className="pt-2">{children}</p> </>;
+    const Text = ({ children }) => <><p className="pt-2 font-mont break-after-auto text-base first-line:indent-2 first-letter:font-ephesis first-letter:font-extrabold first-letter:pr-4 first-letter:uppercase first-letter:text-6xl">{children}</p> </>;
     const options = {
       renderNode: {
         [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>
@@ -38,7 +38,7 @@ export const PostDialog = ({ post, close, open }) => {
                                 </div>
                                 <span className="text-sm">Corina Morera</span>
                             </div>
-                            <div clasName="font-mont break-after-auto text-base first-line:indent-2 first-letter:font-ephesis first-letter:font-extrabold first-letter:pr-4 first-letter:uppercase first-letter:text-6xl">
+                            <div >
                             {documentToReactComponents(post.contentNode, options)}
                             </div>
                         </div> : null}
