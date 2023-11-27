@@ -1,21 +1,12 @@
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { XCircleIcon } from '@heroicons/react/24/outline';
 
 export const DefaultDialog = ({ children, close, open }) => {
-    const [show, setShow] = useState(false);
-    const handleClose = () => {
-      setShow(false);
-      close();
-    }
-
-    useEffect(() => {
-        if (open) setShow(open);
-    }, [open]);
 
   return (
-    <Transition show={show} as={Fragment}>
-      <Dialog onClose={handleClose} className="fixed inset-0 left-0 z-20 overflow-y-auto">
+    <Transition show={open} as={Fragment}>
+      <Dialog onClose={close} className="fixed inset-0 left-0 z-20 overflow-y-auto">
         <div className="flex h-screen items-center justify-center">
           <Transition.Child
             as={Fragment}
@@ -39,8 +30,12 @@ export const DefaultDialog = ({ children, close, open }) => {
             leaveTo="opacity-0 scale-95"
           >
             <Dialog.Panel className="flex flex-col fixed rounded-xl p-6">
-                <button className="flex absolute self-end ring-0 border-none rounded-full z-[21] p-1 mt-4 mr-1 hover:bg-white hover:bg-opacity-10" 
-                onClick={handleClose}><XCircleIcon width="32" height="32" color="#FFFFFF" strokeWidth={2} /></button>
+                <button
+                  className="flex absolute self-end ring-0 border-none rounded-full z-[21] p-1 mt-4 mr-1 hover:bg-white hover:bg-opacity-10" 
+                  onClick={close}
+                >
+                  <XCircleIcon width="32" height="32" color="#FFFFFF" strokeWidth={2} />
+                </button>
              {children}
             </Dialog.Panel>
           </Transition.Child>

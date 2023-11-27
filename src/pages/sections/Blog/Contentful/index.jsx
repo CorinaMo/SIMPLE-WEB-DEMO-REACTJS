@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { createClient } from 'contentful';
-import { conicGradient, conicGradientBlack, conicGradientPink } from '../../../../components/styles';
+import { conicGradient, conicGradientPink } from '../../../../components/styles';
 import { ChevronDoubleRightIcon } from '@heroicons/react/24/outline';
 import { PostDialog } from '../PostDialog';
 import { LoadingAnimation } from '../../../../components';
@@ -29,7 +29,7 @@ export const PostList = () => {
         alt: '',
         contentNode: null,
     };
-    const boxStyle = 'flex place-content-center w-fit h-fit';
+
     const [posts, setPosts] = useState([]);
     const [openPost, setOpenPost] = useState(false);
     const [currentPost, setCurrentPost] = useState(defaultBasicPost);
@@ -107,7 +107,9 @@ export const PostList = () => {
                         </button>
                     )) : (
                         <div className={`flex flex-col w-full h-full justify-center`}>
-                           <p className="text-sm pt-2 text-center text-white">Loading Posts from Contentful...</p>
+                           <p className="text-sm pt-2 text-center text-white">
+                            Loading Posts from Contentful...
+                        </p>
                              <LoadingAnimation />
                         </div>
                     )}
