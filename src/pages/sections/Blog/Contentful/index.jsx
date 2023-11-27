@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { createClient } from 'contentful';
-import { conicGradient, conicGradientPink } from '../../../../components/styles';
+import { conicGradient, conicGradientBlack, conicGradientPink } from '../../../../components/styles';
 import { ChevronDoubleRightIcon } from '@heroicons/react/24/outline';
 import { PostDialog } from '../PostDialog';
+import { LoadingAnimation } from '../../../../components';
 
 const Image = ({ post }) => {
     return (
@@ -28,6 +29,7 @@ export const PostList = () => {
         alt: '',
         contentNode: null,
     };
+    const boxStyle = 'flex place-content-center w-fit h-fit';
     const [posts, setPosts] = useState([]);
     const [openPost, setOpenPost] = useState(false);
     const [currentPost, setCurrentPost] = useState(defaultBasicPost);
@@ -93,8 +95,8 @@ export const PostList = () => {
                 <ChevronDoubleRightIcon width="100" height="100" className="text-white" />
             </div>
             <div className="flex w-[80%] overflow-x-scroll">
-                <div className="flex flex-row gap-10 h-fit p-4">
-                    {posts?.map((post, index) => (
+                <div className="flex flex-row gap-10 w-full h-fit p-4">
+                    {posts?.length > 0 ? posts.map((post, index) => (
                         <button
                         onClick={(e) => {handleShowPost(e, index)}}
                             key={post.title + index}
@@ -103,7 +105,12 @@ export const PostList = () => {
                             <h3 className="bg-gradient-to-tr from-sky-500 via-purple-600 to-pink-500 bg-clip-text text-transparent z-[2] w-full text-base font-mont font-bold leading-tight py-2">{post.title}</h3>
                             <p className="z-[2] text-sm w-full font-quicksand leading-tight">{`${post?.text?.slice(0,70) ?? ''}...`}</p>
                         </button>
-                    ))}
+                    )) : (
+                        <div className={`flex flex-col w-full h-full justify-center`}>
+                           <p className="text-sm pt-2 text-center text-white">Loading Posts from Contentful...</p>
+                             <LoadingAnimation />
+                        </div>
+                    )}
                 </div>
             </div>
             <PostDialog close={handleClosePost} open={openPost} post={currentPost} />
