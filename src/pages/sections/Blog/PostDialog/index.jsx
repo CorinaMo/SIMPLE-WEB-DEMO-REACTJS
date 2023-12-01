@@ -22,8 +22,8 @@ export const PostDialog = ({ post, close, open }) => {
                     <div>
                         <div className="flex relative max-w-full h-[38vh] md:w-full sm:h-[45%] md:h-[70h] lg:h-[95vh] overflow-hidden items-center">
                             {post?.picture
-                                ? <img src={'https:' + post?.picture} alt={post?.alt} />
-                                : <div className="w-max h-auto bg-rainbow" />}
+                                ? <img src={'https:' + post?.picture} alt={post?.alt} className="min-h-full min-w-full" />
+                                : <div className="w-max h-full bg-rainbow" />}
                             <div className={`flex flex-col absolute bottom-4 w-full h-fit`}>
                                 <div className={conicGradient}>
                                 <h3 className="text-xl font-quicksand font-bold leading-tight py-2 px-4 z-10 uppercase w-full h-fit text-white">
