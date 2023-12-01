@@ -110,7 +110,7 @@ export const PostList = () => {
                 </button>
 
             </div>
-            <div ref={ref} className="flex w-[80%] overflow-x-scroll pr-10">
+            <div id="postlist" ref={ref} className="flex w-[80%] overflow-x-scroll pr-10">
                 <div className="inline-flex gap-10 h-fit p-2 sm:p-4 border-r-8 border-transparent">
                     {posts?.length > 0 ? posts.map((post, index) => (
                         <button
