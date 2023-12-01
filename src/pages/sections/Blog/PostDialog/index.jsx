@@ -35,8 +35,8 @@ export const PostDialog = ({ post, close, open }) => {
                                 {post?.title ?? ''}
                             </h3>
                             {post?.contentNode ? <div className="flex flex-row gap-4 sm:gap-10 py-6 md:py-12" >
-                                <div className="flex flex-col gap-2 w-full h-max justify-center items-center pt-4 sm:pt-10">
-                                    <div className="rounded-full w-fit">
+                                <div className="flex flex-col gap-2 w-full h-max justify-center items-center">
+                                    <div className="rounded-full w-fit h-fit mt-10">
                                         <ProfilePicture size={16} />
                                     </div>
                                     <span className="text-sm font-medium font-mont text-center">Corina Morera</span>
