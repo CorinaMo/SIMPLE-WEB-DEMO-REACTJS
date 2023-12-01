@@ -2,7 +2,7 @@ import { ScrollButton } from '../../../components/Buttons/ScrollButton';
 import { TitleSection } from '../../../components';
 import { SectionBase } from '../components/SectionBase';
 import { SectionDivider } from '../components/SectionDivider';
-import { PostList } from './Contentful';
+import { PostList } from './PostListContentful';
 
 export const Blog = ({ goTo }) => {
   return (

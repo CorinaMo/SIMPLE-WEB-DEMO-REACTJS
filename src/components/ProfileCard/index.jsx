@@ -7,7 +7,7 @@ export const ProfileCard = () => {
             <div className="flex flex-col w-full h-full self-center absolute left-0 top-0 border-gray-100 border-4 shadow-white blur-2xl" />
             <div className="flex w-[40vw] h-[40vw] sm:w-[18vw] sm:h-[18vw] self-end absolute -right-10 -bottom-10 sm:-right-20 sm:-bottom-20 bg-gradient-to-tl from-rose-800 via-transparent to-pink-600 rounded-full blur-sm" />
             <div className="flex w-[40vw] h-[40vw] sm:w-[18vw] sm:h-[18vw] self-end absolute -left-10 -top-10 sm:-left-20 sm:-top-20 bg-gradient-to-tl from-sky-500 via-transparent to-sky-800 rounded-full blur-sm" />
-            <ProfilePicture />
+            <ProfilePicture size={24} />
 
             <span className="font-quicksand font-extrabold mt-4 text-white text-opacity-80 text-md">
                 CORINA MORERA

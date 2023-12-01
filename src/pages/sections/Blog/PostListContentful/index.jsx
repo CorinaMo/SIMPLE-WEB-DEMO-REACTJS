@@ -90,12 +90,12 @@ export const PostList = () => {
 
     return (
         <div className={`flex left-0 w-screen overflow-x-scroll justify-center py-6 ${conicGradientPink}`}>
-            <div className="flex flex-col w-fit h-fit justify-end">
+            <div className="flex flex-col w-fit h-fit items-center">
                 <h2 className="text-white text-base font-quicksand" >Latest Posts</h2>
-                <ChevronDoubleRightIcon width="100" height="100" className="text-white" />
+                <ChevronDoubleRightIcon className="text-white w-10 h-10 sm:w-24 sm:h-24" />
             </div>
             <div className="flex w-[80%] overflow-x-scroll">
-                <div className="flex flex-row gap-10 w-full h-fit p-4">
+                <div className="flex flex-row gap-10 w-full h-fit p-2 sm:p-4">
                     {posts?.length > 0 ? posts.map((post, index) => (
                         <button
                         onClick={(e) => {handleShowPost(e, index)}}
