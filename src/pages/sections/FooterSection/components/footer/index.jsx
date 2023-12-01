@@ -5,7 +5,7 @@ import { goGithub, goLinkedin, goMedium } from "../../../../../utils/functions/g
 
 const SocialLine = ({ children, action }) => {
     return <button
-            className="flex flex-row gap-3 uppercase text-[0.6rem] md:text-xs text-white items-center"
+            className="flex flex-row gap-1 md:gap-3 uppercase text-[0.6rem] md:text-xs text-white items-center"
             onClick={action}> {children}</button>
 };
 
@@ -22,8 +22,8 @@ export const Footer = () => {
 
                     </div>
                     <div className="flex flex-col w-[95vw] md:w-[25vw] justify-center items-center">
-                        <div className="flex flex-row flex-wrap md:flex-col gap-1 md:gap-2 w-fit h-fit justify-center md:items-start self-center">
-                            <SocialLine action={() => goLinkedin()}> <LinkedInIcon color="#FFFFFF" />Linkedin</SocialLine>
+                        <div className="flex flex-row flex-wrap md:flex-col gap-3 md:gap-2 w-fit h-fit justify-center items-center md:items-start self-center">
+                            <SocialLine action={() => goLinkedin()}> <LinkedInIcon color="#FFFFFF" className="mb-1" />Linkedin</SocialLine>
                             <SocialLine action={() => goGithub()}><GithubIcon color="#FFFFFF" /> Github</SocialLine>
                             <SocialLine action={() => goMedium()}><MediumIcon color="#FFFFFF" />My Mental Straws</SocialLine>
                         </div>
