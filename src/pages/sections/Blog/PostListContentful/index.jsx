@@ -8,10 +8,10 @@ import { handleScrollPostList } from '../../../../utils';
 
 const Image = ({ post }) => {
     return (
-        <div className="relative w-60 max-h-56 overflow-hidden rounded-md flex items-center">
+        <div className="relative w-60 h-44 overflow-hidden rounded-md flex items-center">
             {post.pic !== null
-                ? <img src={'https:' + post.picture} alt={post.alt} className="w-full h-auto rounded-lg hover:scale-110" />
-                : <div className="w-full h-56 bg-rainbow rounded-lg hover:scale-110" />
+                ? <img src={'https:' + post.picture} alt={post.alt} className="min-w-full min-h-full rounded-lg hover:scale-110" />
+                : <div className="w-60 h-52 bg-rainbow rounded-lg hover:scale-110" />
             }
             <div className={`${conicGradient} flex absolute bottom-4 w-full h-fit items-end`}>
                 <h3 className="text-base font-quicksand font-bold leading-tight py-2 z-10 uppercase w-full h-fit text-white">
@@ -116,7 +116,7 @@ export const PostList = () => {
                         <button
                             onClick={(e) => { handleShowPost(e, index) }}
                             key={post.title + index}
-                            className="flex flex-col p-3 rounded-lg w-60 max-h-full bg-white">
+                            className="flex flex-col p-3 rounded-lg w-60 h-80 bg-white">
                             <Image post={post} />
                             <h3 className="bg-gradient-to-tr from-sky-500 via-purple-600 to-pink-500 bg-clip-text text-transparent z-[2] w-full text-base font-mont font-bold leading-tight py-2">{post.title}</h3>
                             <p className="z-[2] text-sm w-full font-quicksand leading-tight">{`${post?.text?.slice(0, 70) ?? ''}...`}</p>
