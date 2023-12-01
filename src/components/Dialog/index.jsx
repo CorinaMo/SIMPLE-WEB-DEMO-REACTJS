@@ -31,7 +31,7 @@ export const DefaultDialog = ({ children, close, open }) => {
           >
             <Dialog.Panel className="flex flex-col fixed rounded-xl p-6">
                 <button
-                  className="flex absolute self-end ring-0 border-none rounded-full z-[21] p-1 mt-4 mr-1 hover:bg-white hover:bg-opacity-10" 
+                  className="flex absolute self-end ring-0 border-none rounded-full z-[21] p-1 mt-4 mr-1 bg-black bg-opacity-60 hover:bg-opacity-40" 
                   onClick={close}
                 >
                   <XCircleIcon width="32" height="32" color="#FFFFFF" strokeWidth={2} />
