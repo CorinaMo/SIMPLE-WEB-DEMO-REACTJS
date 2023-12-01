@@ -5,7 +5,7 @@ import { goGithub, goLinkedin, goMedium } from "../../../../../utils/functions/g
 
 const SocialLine = ({ children, action }) => {
     return <button
-            className="flex flex-row gap-1 md:gap-3 uppercase text-[0.6rem] md:text-xs text-white items-center"
+            className="flex flex-row gap-1 md:gap-3 uppercase text-[0.6rem] md:text-xs text-gray-200 items-center hover:text-white"
             onClick={action}> {children}</button>
 };
 
