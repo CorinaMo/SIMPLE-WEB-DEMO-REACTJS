@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createClient } from 'contentful';
 import { conicGradient, conicGradientPink } from '../../../../components/styles';
-import { ChevronDoubleRightIcon } from '@heroicons/react/24/outline';
+import { ChevronDoubleLeftIcon, ChevronDoubleRightIcon } from '@heroicons/react/24/outline';
 import { PostDialog } from '../PostDialog';
 import { LoadingAnimation } from '../../../../components';
+import { handleScrollPostList } from '../../../../utils';
 
 const Image = ({ post }) => {
     return (
@@ -33,6 +34,7 @@ export const PostList = () => {
     const [posts, setPosts] = useState([]);
     const [openPost, setOpenPost] = useState(false);
     const [currentPost, setCurrentPost] = useState(defaultBasicPost);
+    const ref = useRef();
 
     const handleShowPost = (e, index) => {
         e?.preventDefault();
@@ -67,7 +69,7 @@ export const PostList = () => {
                     const picture = entry?.fields?.media?.fields?.file?.contentType === 'image/jpeg' ? (entry.fields.media.fields.file.url) : '';
                     const alt = entry?.fields?.media?.fields?.file?.fileName ?? '';
                     const contentNode = entry?.fields?.postcontent ?? {};
-                    filteredPosts.push({title, text, picture, alt, contentNode});
+                    filteredPosts.push({ title, text, picture, alt, contentNode });
                     return filteredPosts;
                 });
                 setPosts(filteredPosts ?? []);
@@ -76,6 +78,14 @@ export const PostList = () => {
             console.error('Error fetching data from Contentful:', error);
             return
         }
+    };
+
+    const scrollListNext = () => {
+        handleScrollPostList(ref, true);
+    };
+
+    const scrollListPrev = () => {
+        handleScrollPostList(ref, false);
     };
 
     useEffect(() => {
@@ -92,25 +102,31 @@ export const PostList = () => {
         <div className={`flex left-0 w-screen overflow-x-scroll justify-center py-6 ${conicGradientPink}`}>
             <div className="flex flex-col w-fit h-fit items-center">
                 <h2 className="text-white text-base font-quicksand" >Latest Posts</h2>
-                <ChevronDoubleRightIcon className="text-white w-10 h-10 sm:w-24 sm:h-24" />
+                <button onClick={scrollListNext}>
+                    <ChevronDoubleRightIcon className="text-white w-10 h-10 sm:w-20 sm:h-20 hover:scale-90" />
+                </button>
+                <button onClick={scrollListPrev}>
+                    <ChevronDoubleLeftIcon className="text-white w-10 h-10 sm:w-20 sm:h-20 hover:scale-90" />
+                </button>
+
             </div>
-            <div className="flex w-[80%] overflow-x-scroll">
-                <div className="flex flex-row gap-10 w-full h-fit p-2 sm:p-4">
+            <div ref={ref} className="flex w-[80%] overflow-x-scroll pr-10">
+                <div className="inline-flex gap-10 h-fit p-2 sm:p-4 border-r-8 border-transparent">
                     {posts?.length > 0 ? posts.map((post, index) => (
                         <button
-                        onClick={(e) => {handleShowPost(e, index)}}
+                            onClick={(e) => { handleShowPost(e, index) }}
                             key={post.title + index}
                             className="flex flex-col p-3 rounded-lg w-60 max-h-full bg-white">
                             <Image post={post} />
                             <h3 className="bg-gradient-to-tr from-sky-500 via-purple-600 to-pink-500 bg-clip-text text-transparent z-[2] w-full text-base font-mont font-bold leading-tight py-2">{post.title}</h3>
-                            <p className="z-[2] text-sm w-full font-quicksand leading-tight">{`${post?.text?.slice(0,70) ?? ''}...`}</p>
+                            <p className="z-[2] text-sm w-full font-quicksand leading-tight">{`${post?.text?.slice(0, 70) ?? ''}...`}</p>
                         </button>
                     )) : (
                         <div className={`flex flex-col w-full h-full justify-center`}>
-                           <p className="text-sm pt-2 text-center text-white">
-                            Loading Posts from Contentful...
-                        </p>
-                             <LoadingAnimation />
+                            <p className="text-sm pt-2 text-center text-white">
+                                Loading Posts from Contentful...
+                            </p>
+                            <LoadingAnimation />
                         </div>
                     )}
                 </div>
