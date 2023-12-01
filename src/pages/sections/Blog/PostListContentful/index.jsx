@@ -99,8 +99,8 @@ export const PostList = () => {
 
 
     return (
-        <div className={`flex left-0 w-screen overflow-x-scroll justify-center py-6 ${conicGradientPink}`}>
-            <div className="flex flex-col w-fit h-fit items-center">
+        <div className={`flex left-0 w-screen justify-center py-6 ${conicGradientPink}`}>
+            <div className="flex flex-col gap-2 w-fit h-fit mr-4 items-center">
                 <h2 className="text-white text-base font-quicksand" >Latest Posts</h2>
                 <button onClick={scrollListNext}>
                     <ChevronDoubleRightIcon className="text-white w-10 h-10 sm:w-20 sm:h-20 hover:scale-90" />
