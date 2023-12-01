@@ -111,7 +111,7 @@ export const PostList = () => {
 
             </div>
             <div ref={ref} className="flex w-[80%] overflow-x-scroll pr-10">
-                <div className="inline-flex gap-10 h-fit p-2 sm:p-4 border-r-8 border-transparent">
+                <div className="inline-flex w-full gap-10 h-fit p-2 sm:p-4 border-r-8 border-transparent">
                     {posts?.length > 0 ? posts.map((post, index) => (
                         <button
                             onClick={(e) => { handleShowPost(e, index) }}
