@@ -13,7 +13,7 @@ export const Footer = () => {
     return (
         <div className={"md:table-fixed mb-0 min-h-fit py-6 " + conicGradientBlack}>
                 <div className="absolute bottom-0 bg-black bg-opacity-30 h-full" />
-                <div className="flex flex-col md:flex-row gap-5 md:gap-10 w-full h-full justify-center items-center">
+                <div className="flex flex-col md:flex-row gap-10 w-full h-full justify-center items-center">
                     <div className="flex flex-col w-[65vw] md:w-[25vw] justify-center items-center">
                         <CodeBracketIcon color="#ffffff" className="w-5 h-5 md:w-7 md:h-7" />
                         <span className="text-white font-bold text-xs sm:text-sm uppercase pt-2 self-center">Corina Morera</span>
