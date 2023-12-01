@@ -23,7 +23,7 @@ export const Footer = () => {
                     </div>
                     <div className="flex flex-col w-[95vw] md:w-[25vw] justify-center items-center">
                         <div className="flex flex-row flex-wrap md:flex-col gap-3 md:gap-2 w-fit h-fit justify-center items-center md:items-start self-center">
-                            <SocialLine action={() => goLinkedin()}> <LinkedInIcon color="#FFFFFF" className="mb-1" />Linkedin</SocialLine>
+                            <SocialLine action={() => goLinkedin()}> <LinkedInIcon color="#FFFFFF" />Linkedin</SocialLine>
                             <SocialLine action={() => goGithub()}><GithubIcon color="#FFFFFF" /> Github</SocialLine>
                             <SocialLine action={() => goMedium()}><MediumIcon color="#FFFFFF" />My Mental Straws</SocialLine>
                         </div>
