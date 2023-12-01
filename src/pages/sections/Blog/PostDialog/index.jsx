@@ -24,11 +24,16 @@ export const PostDialog = ({ post, close, open }) => {
                             {post?.picture
                                 ? <img src={'https:' + post?.picture} alt={post?.alt} />
                                 : <div className="w-max h-auto bg-rainbow" />}
-                            <div className={`flex absolute bottom-4 w-full h-fit items-end ${conicGradient}`}>
+                            <div className={`flex flex-col absolute bottom-4 w-full h-fit`}>
+                                <div className={conicGradient}>
                                 <h3 className="text-xl font-quicksand font-bold leading-tight py-2 px-4 z-10 uppercase w-full h-fit text-white">
                                     {post?.title ?? ''}
                                 </h3>
+                                </div>
+                                <span className="text-xs py-1 px-4 uppercase bg-black sm:bg-opacity-40 text-white leading-tight">{post?.alt}</span>
+
                             </div>
+
                         </div>
                         <div className="max-w-full pt-6 px-6 sm:pt-10 md:pt-16 sm:px-12 md:px-28">
                             <h3 className="flex text-6xl font-ephesis text-center font-bold leading-[0.8] sm:leading-[1] md:leading-tight text-gray-800">

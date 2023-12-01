@@ -67,7 +67,7 @@ export const PostList = () => {
                     const title = entry?.fields?.title ?? '';
                     const text = content(entry?.fields?.postcontent?.content ?? '');
                     const picture = entry?.fields?.media?.fields?.file?.contentType === 'image/jpeg' ? (entry.fields.media.fields.file.url) : '';
-                    const alt = entry?.fields?.media?.fields?.file?.fileName ?? '';
+                    const alt = entry?.fields?.media?.fields?.description ?? '';
                     const contentNode = entry?.fields?.postcontent ?? {};
                     filteredPosts.push({ title, text, picture, alt, contentNode });
                     return filteredPosts;
