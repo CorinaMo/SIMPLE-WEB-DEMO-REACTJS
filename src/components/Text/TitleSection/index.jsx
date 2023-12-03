@@ -1,4 +1,4 @@
-import { conicGradientPink } from "../../styles";
+import { conicGradientPink } from "../../conicGradients";
 
 export const TitleSection = ({ children }) => {
     return (

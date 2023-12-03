@@ -1,6 +1,6 @@
 import { UserIcon } from '@heroicons/react/24/outline';
 import { DefaultDialog } from '../../../../components/Dialog';
-import { conicGradient } from '../../../../components/styles';
+import { conicGradient } from '../../../../components/conicGradients';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from "@contentful/rich-text-types";
 import { ProfilePicture } from '../../../../components/ProfileCard/profilePicture';

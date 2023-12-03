@@ -9,6 +9,7 @@ import { motion, useAnimation } from "framer-motion";
 import { SectionDivider } from "../components/SectionDivider";
 
 export const FooterSection = () => {
+    // Handle PDF (React-PDF).
     const [showPDF, setShowPDF] = useState(false);
     const [isDownloading, setIsDownloading] = useState(false);
     const handleClosePDF = () => setShowPDF(false);
@@ -29,6 +30,7 @@ export const FooterSection = () => {
 
     //FOR LATER const goToGamePairs = () => router('/pairs');
 
+    // Animation
     const ref = useRef();
     const isVisible = useVisibility(ref ?? null);
     const controls = useAnimation();

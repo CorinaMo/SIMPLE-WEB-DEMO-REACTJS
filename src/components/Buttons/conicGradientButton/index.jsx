@@ -1,4 +1,4 @@
-import { conicGradient } from "../../styles";
+import { conicGradient } from "../../conicGradients";
 
 export const ConicGradientButton = ({ action, children }) => {
     return (

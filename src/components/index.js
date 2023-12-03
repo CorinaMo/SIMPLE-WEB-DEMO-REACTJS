@@ -4,5 +4,5 @@ export * from './LoadingAnimation';
 export * from './ParticlesBackground';
 export * from './ProfileCard';
 export * from './socialcons';
-export * from './styles';
+export * from './conicGradients';
 export * from './Text';

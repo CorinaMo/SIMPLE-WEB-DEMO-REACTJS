@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { BlueBackground, TitleSection } from "../../../../components";
+import { TitleSection } from "../../../../components";
 import { TableCards } from "./components/table";
 import { ChevronLeftIcon } from "@heroicons/react/24/outline";
 import { SectionBase } from "../../components/SectionBase";

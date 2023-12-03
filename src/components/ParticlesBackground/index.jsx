@@ -1,4 +1,4 @@
-import { conicGradient } from "../styles";
+import { conicGradient } from "../conicGradients";
 import { ParticlesContainer } from "./particles";
 // anas-alshanti-unsplash.jpg unsplash1
 import BackgroundImage from "../../assets/images/anas-alshanti-unsplash.jpg";

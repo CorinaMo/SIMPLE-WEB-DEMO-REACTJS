@@ -1,9 +1,14 @@
 ### NODE version: 20.4.0
 ### Deployed in Vercel: https://demoweb-fawn.vercel.app/
 
+### .env file 
+**-> You have an .env.example file with the 2 variables needed for the Contentful API. You have to add them to your .env file with your custom keys.**
+
+`REACT_APP_YOUR_SPACE_ID=[YOUR-CONTENTFUL-SPACE-ID]`
+`REACT_APP_YOUR_ACCESS_TOKEN=[YOUR-CONTENTFUL-ACCESS_TOKEN]`
+
 ## Screenshots
-![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/mobile.png)
-![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/pc2.png)
+![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/screens.png | height=250px)
 
 # Getting Started with Create React App
 

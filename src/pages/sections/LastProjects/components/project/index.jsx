@@ -1,4 +1,4 @@
-import { conicGradientPink } from '../../../../../components/styles';
+import { conicGradientPink } from '../../../../../components/conicGradients';
 
 export const Project = ({ logo, title, subtitle, href, tasks }) => {
     return (

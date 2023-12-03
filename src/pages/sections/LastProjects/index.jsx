@@ -10,6 +10,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useVisibility } from '../../../utils';
 
 export const LastProjects = ({ goTo }) => {
+  // Animation
   const ref = useRef();
   const isVisible = useVisibility(ref ?? null);
   const controls = useAnimation();

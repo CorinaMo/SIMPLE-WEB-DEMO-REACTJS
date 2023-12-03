@@ -4,7 +4,7 @@ import { handleScroll, useVisibility } from "../../utils";
 import { useRef } from "react";
 import { FooterSection } from "../sections/FooterSection";
 import { ArrowUpCircleIcon } from "@heroicons/react/24/outline";
-import { conicGradient } from "../../components/styles";
+import { conicGradient } from "../../components/conicGradients";
 import { motion } from "framer-motion";
 import { Blog } from "../sections/Blog";
 
