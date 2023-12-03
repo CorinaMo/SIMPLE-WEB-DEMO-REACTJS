@@ -65,6 +65,8 @@ export const PostList = () => {
             const response = await client?.getEntries();
             if (response?.items) {
                 const entries = response.items;
+                // ALERT! YOU HAVE TO UPDATE THE DATA EXTRACTION CONSIDERING
+                // YOUR CUSTOM FIELDS ON CONTENTFUL 
                 entries?.map(entry => {
                     const title = entry?.fields?.title ?? '';
                     const text = content(entry?.fields?.postcontent?.content ?? '');
@@ -122,7 +124,7 @@ export const PostList = () => {
                             onClick={(e) => { handleShowPost(e, index) }}
                             key={post.title + index}
                             className="flex flex-col p-3 rounded-lg w-60 h-80 bg-white">
-                            <PostImage picture={post?.picture ?? null} alt={post?.alt?? ''} title={post?.title?? ''} />
+                            <PostImage picture={post?.picture ?? ''} alt={post?.alt ?? ''} title={post?.title ?? ''} />
                             <h3 className="bg-gradient-to-tr from-sky-500 via-purple-600 to-pink-500 bg-clip-text text-transparent z-[2] w-full text-base font-mont font-bold leading-tight py-2">{post.title}</h3>
                             <p className="z-[2] text-sm w-full font-quicksand leading-tight">{`${post?.text?.slice(0, 70) ?? ''}...`}</p>
                         </button>
