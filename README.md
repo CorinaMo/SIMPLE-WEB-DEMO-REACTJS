@@ -8,7 +8,7 @@
 `REACT_APP_YOUR_ACCESS_TOKEN=[YOUR-CONTENTFUL-ACCESS_TOKEN]`
 
 ## Screenshots
-![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/screens.png | height=250px)
+![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/screens.png)
 
 # Getting Started with Create React App
 
