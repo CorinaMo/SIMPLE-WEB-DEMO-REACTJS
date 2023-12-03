@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import NMlogo from '../../../assets/svgs/natural-machines-logo-white.svg';
-import InnervoicesLogo from '../../../assets/images/logo.png';
+import InnervoicesLogo from '../../../assets/images/innervoices-logo.png';
 import { ScrollButton } from '../../../components/Buttons/ScrollButton';
 import { TitleSection } from '../../../components';
 import { SectionBase } from '../components/SectionBase';

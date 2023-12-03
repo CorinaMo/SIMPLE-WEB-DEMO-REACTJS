@@ -1,4 +1,3 @@
-import { UserIcon } from '@heroicons/react/24/outline';
 import { DefaultDialog } from '../../../../components/Dialog';
 import { conicGradient } from '../../../../components/conicGradients';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
@@ -6,7 +5,7 @@ import { BLOCKS } from "@contentful/rich-text-types";
 import { ProfilePicture } from '../../../../components/ProfileCard/profilePicture';
 
 export const PostDialog = ({ post, close, open }) => {
-    const Text = ({ children },) => <><p className="pt-2 font-mont break-after-auto text-base first-line:indent-2 first-letter:font-ephesis first-letter:font-extrabold first-letter:pr-2 first-letter:uppercase first-letter:text-4xl">{children}</p> </>;
+    const Text = ({ children }) => <><p className="pt-2 font-mont break-after-auto text-base first-line:indent-2 first-letter:font-ephesis first-letter:font-extrabold first-letter:pr-2 first-letter:uppercase first-letter:text-4xl">{children}</p> </>;
     const options = {
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => {
@@ -26,9 +25,9 @@ export const PostDialog = ({ post, close, open }) => {
                                 : <div className="w-max h-full bg-rainbow" />}
                             <div className={`flex flex-col absolute bottom-4 w-full h-fit`}>
                                 <div className={conicGradient}>
-                                <h3 className="text-xl font-quicksand font-bold leading-tight py-2 px-4 z-10 uppercase w-full h-fit text-white">
-                                    {post?.title ?? ''}
-                                </h3>
+                                    <h3 className="text-xl font-quicksand font-bold leading-tight py-2 px-4 z-10 uppercase w-full h-fit text-white">
+                                        {post?.title ?? ''}
+                                    </h3>
                                 </div>
                                 <span className="text-xs py-1 px-4 uppercase bg-black sm:bg-opacity-40 text-white leading-tight">{post?.alt}</span>
 
