@@ -4,13 +4,6 @@
 ## Screenshots
 ![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/screens.png)
 
-### .env file 
-**-> You have an .env.example file with the 2 variables needed for the Contentful API. You have to add them to your .env file with your custom keys.**
-
-`REACT_APP_YOUR_SPACE_ID=[YOUR-CONTENTFUL-SPACE-ID]`
-
-`REACT_APP_YOUR_ACCESS_TOKEN=[YOUR-CONTENTFUL-ACCESS_TOKEN]`
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
