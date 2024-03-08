@@ -6,15 +6,14 @@ import { PostList } from './PostListContentful';
 
 export const Blog = ({ goTo }) => {
   return (
-    <SectionBase>
-      <SectionDivider />
-      <div className="flex flex-col w-full h-full items-center justify-center">
+    <div className='flex flex-col w-full h-[100vh]'>
+      <div className="flex flex-col w-full h-full items-center justify-center pt-6">
         <TitleSection>Demo Blog Contentful</TitleSection>
-        <div className="flex flex-col w-full pt-4">
+        <div className="flex flex-col w-full">
             <PostList />
         </div>
       </div>
       <ScrollButton color="rgb(157,23,77)" goTo={goTo} />
-    </SectionBase>
+    </div>
   );
 };
