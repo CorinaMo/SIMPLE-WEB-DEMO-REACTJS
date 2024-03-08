@@ -3,7 +3,7 @@ import { DocumentArrowDownIcon, DocumentTextIcon } from "@heroicons/react/24/out
 import { ConicGradientButton, conicGradient, DefaultDialog, TitleSection } from "../../../components";
 import { SectionBase } from "../components/SectionBase";
 import { Footer, PDFContent } from "./components";
-import Resume from '../../../assets/docs/Resume-2023.pdf';
+import Resume from '../../../assets/docs/Resume-2024.pdf';
 import { useVisibility } from "../../../utils";
 import { motion, useAnimation } from "framer-motion";
 import { SectionDivider } from "../components/SectionDivider";

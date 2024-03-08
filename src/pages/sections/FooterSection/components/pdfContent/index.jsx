@@ -13,7 +13,7 @@ export const PDFContent = () => {
     useEffect(() => {
         // Worker for React-PDF
         pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-        setFile('/Resume-2023.pdf');
+        setFile('/Resume-2024.pdf');
     }, []);
 
     useEffect(() => {
