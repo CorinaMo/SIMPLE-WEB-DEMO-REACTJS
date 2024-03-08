@@ -6,7 +6,7 @@ export const SocialBar = () => {
     const linkStyle = 'flex flex-col w-10 h-10 p-2 bg-gray-100 border-blue-50 border-2 border-opacity-5 bg-opacity-10 rounded-full backdrop-filter drop-shadow-xl shadow-slate-200 backdrop-blur-sm place-center hover:bg-opacity-30'
 
     return (
-        <div className="flex flex-row gap-3 py-4 text-white self-center">
+        <div className="flex flex-row gap-3 pt-8 text-white self-center">
             <button onClick={goLinkedin} className={linkStyle}>
                 <LinkedInIcon color="#FFFFFF" />
             </button>

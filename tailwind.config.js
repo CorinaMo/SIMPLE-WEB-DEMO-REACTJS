@@ -14,7 +14,8 @@ module.exports = {
         "mont": "Montserrat Alternates",
         "arimo": "Arimo",
         "quicksand": "Quicksand",
-        "ephesis": "Ephesis"
+        "ephesis": "Ephesis",
+        "truculenta": "Truculenta"
       }
     },
   },

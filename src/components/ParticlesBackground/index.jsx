@@ -1,7 +1,5 @@
 import { conicGradient } from "../conicGradients";
 import { ParticlesContainer } from "./particles";
-// anas-alshanti-unsplash.jpg unsplash1
-import BackgroundImage from "../../assets/images/anas-alshanti-unsplash.jpg";
 export const ParticlesBackground = ({ children }) => {
     return (
         <div className={`${conicGradient} flex w-[100vw] h-[100vh] items-center`}>
