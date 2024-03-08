@@ -8,6 +8,7 @@ module.exports = {
       backgroundImage: {
         'rainbow': 'linear-gradient(to right, hsl(0 100% 50%), hsl(60 100% 50%), hsl(120 100% 50%), hsl(180 100% 50%), hsl(240 100% 50%), hsl(300 100% 50%))',
         'unsplash1': `url('./assets/images/anas-alshanti-unsplash.jpg')`,
+        'unsplash2': `url('./assets/images/workplace.jpg')`,
       },
 
       fontFamily: {

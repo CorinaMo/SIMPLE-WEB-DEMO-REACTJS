@@ -25,7 +25,7 @@ export const particlesOptions = {
   },
   particles: {
     color: {
-      value: ["rgb(14,165,233)", "#db2777", "#000000", "#312e81"],
+      value: ["rgb(14,165,233)", "#db2777", "#ffffff", "#312e81"],
     },
     move: {
       direction: "none",
@@ -45,7 +45,7 @@ export const particlesOptions = {
       value: 200,
     },
     opacity: {
-      value: 0.25,
+      value: 0.15,
       random: {
         enable: true,
         minimumValue: 0.1,
