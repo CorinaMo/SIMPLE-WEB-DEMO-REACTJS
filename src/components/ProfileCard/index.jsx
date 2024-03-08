@@ -11,11 +11,11 @@ export const ProfileCard = () => {
 			</ruby>
 			<SocialBar />
 			<div className="flex relative self-center w-fit h-fit">
-				<div className="flex flex-row gap-2 z-[5] items-center w-fit max-h-full" >
-					<p className="bg-rainbow bg-clip-text text-transparent text-medium self-center leading-tight text-sm [text-shadow:_1px_0_0_rgba(255_255_255_/_40%)]">
+				<div className="flex flex-row gap-2 z-[5] items-center w-fit max-h-full  rounded-full px-2 mt-2" >
+					<p className="bg-rainbow bg-clip-text text-transparent text-medium self-center leading-tight text-sm [text-shadow:_1px_0_0_rgba(0_0_0_/_60%)]">
 						#ActuallyAutistic
 					</p>
-					<span className="bg-rainbow bg-clip-text text-2xl text-transparent [text-shadow:_1px_0_0_rgba(255_255_255_/_40%)]">∞</span>
+					<span className="bg-rainbow bg-clip-text text-2xl text-transparent [text-shadow:_1px_0_0_rgba(0_0_0_/_40%)]">∞</span>
 				</div>
 			</div>
 		</div>
