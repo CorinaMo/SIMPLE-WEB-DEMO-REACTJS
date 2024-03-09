@@ -30,7 +30,7 @@ export const Home = () => {
                         <div className="flex w-full h-full justify-center items-center">
                             <ProfileCard />
                         </div>
-                        <ScrollButton color="#FFFFFF" goTo={() => goTo(lastProjectsRef?.current)} />
+                        <ScrollButton color="#FFFFFF" withShadow={true} goTo={() => goTo(lastProjectsRef?.current)} />
                     </ParticlesBackground>
                 </div>
                 <div ref={lastProjectsRef} >

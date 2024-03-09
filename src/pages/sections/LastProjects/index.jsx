@@ -54,7 +54,7 @@ export const LastProjects = ({ goTo }) => {
           </motion.div>
         </div>
       </div>
-      <ScrollButton color="rgb(157,23,77)" goTo={goTo} />
+      <ScrollButton color="rgb(157,23,77)" withShadow={false} goTo={goTo} />
     </SectionBase>
   );
 };
