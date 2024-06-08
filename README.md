@@ -1,5 +1,4 @@
 ### NODE version: 20.4.0
-### Deployed in Vercel: https://demoweb-fawn.vercel.app/
 
 ## Screenshots
 ![screenshots](https://github.com/CorinaMo/SIMPLE-WEB-DEMO-REACTJS/blob/main/public/screens.png)
